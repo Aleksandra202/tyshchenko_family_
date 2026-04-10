@@ -1,0 +1,140 @@
+/* Основні налаштування */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    /* Фонове зображення */
+    background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* Ефект затемнення фону для кращого читання тексту */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+}
+
+/* Контейнер */
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    padding: 60px 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Заголовки */
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 8vw, 4rem); /* Адаптивний розмір */
+    color: #bfa071; /* Золотий */
+    margin: 15px 0;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #3a6ea5; /* Синій */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Елементи дизайну */
+.divider {
+    width: 80px;
+    height: 2px;
+    background: #bfa071;
+    margin: 0 auto;
+}
+
+.tagline {
+    font-style: italic;
+    color: #777;
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+.section {
+    margin-bottom: 50px;
+}
+
+/* Стилі тексту */
+.date-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.location-item {
+    margin-bottom: 25px;
+}
+
+.location-label {
+    display: block;
+    font-weight: 600;
+    color: #bfa071;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.address {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.blue-accent {
+    color: #3a6ea5;
+    font-weight: 600;
+}
+
+/* Адаптація iframe */
+.iframe-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+iframe {
+    border: none;
+    width: 100%;
+}
+
+.footer {
+    margin-top: 40px;
+    color: #bfa071;
+}
+
+/* Мобільна адаптація */
+@media (max-width: 480px) {
+    .container {
+        padding: 40px 20px;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+}
