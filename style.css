@@ -11,7 +11,7 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     /* Фонове зображення */
-    background-image: url('https://st3.depositphotos.com/9563468/37385/i/450/depositphotos_373853578-stock-photo-floral-spring-blue-background-blue.jpg');
+    background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -19,63 +19,7 @@ body {
     justify-content: center;
     padding: 40px 20px;
 }
-/* CSS стилі для адаптивного зображення */
-.text-divider {
-        display: flex;
-        align-items: center;
-        text-align: center;
-        color: #333;
-        margin: 20px 0;
-    }
 
-    .line {
-        flex: 1;
-        height: 1px;
-        background-color: #000;
-        margin: 0 15px;
-    }
-
-    .ornament {
-        font-size: 24px;
-    }
-.invitation-container {
-    max-width: 100%; /* Забороняє контейнеру виходити за межі екрана */
-    margin: 0 auto; /* Центрує контейнер на сторінці */
-}
-
-.invitation-container img {
-    max-width: 100%; /* Картинка ніколи не ширша за екран */
-    height: auto;    /* Зберігає пропорції */
-    display: block;  /* Прибирає зайві відступи знизу */
-    margin: 0 auto;  /* Центрує саму картинку всередині */
-}
-
-/* Налаштування для комп'ютерів (за замовчуванням) */
-.desktop-img {
-    display: block; /* Показати */
-}
-
-.mobile-img {
-    display: none; /* Приховати */
-}
-
-/* МЕДІА-ЗАПИТ: Налаштування для телефонів */
-/* Якщо ширина екрана менша за 768px (стандарт для телефонів і планшетів) */
-@media (max-width: 768px) {
-    .desktop-img {
-        display: none; /* Приховати версію для ПК */
-    }
-    
-    .mobile-img {
-        display: block; /* Показати версію для телефону */
-        width: 100%;    /* Заповнити всю ширину мобільного екрана */
-    }
-    
-    /* Додатково: якщо у вас є .container навколо, можна прибрати у нього відступи */
-    .container {
-        padding: 10px; 
-    }
-}
 /* Ефект затемнення фону для кращого читання тексту */
 .overlay {
     position: fixed;
@@ -91,7 +35,7 @@ body {
 .container {
     max-width: 700px;
     width: 100%;
-    background: rgba(255, 253, 250, 0.96);
+    background: rgba(255, 255, 255, 0.96);
     padding: 60px 40px;
     border-radius: 15px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
@@ -184,19 +128,30 @@ iframe {
     margin-top: 40px;
     color: #bfa071;
 }
-.responsive-img {
-    max-width: 100%;    /* Картинка ніколи не буде ширшою за свій контейнер */
-    height: auto;       /* Висота підлаштовується автоматично, зберігаючи пропорції */
-    display: block;     /* Прибирає зайві відступи знизу */
-    margin: 0 auto;     /* Центрує картинку, якщо вона менша за ширину екрана */
+
+/* Стиль для декоративної лінії */
+.decorative-divider {
+    max-width: 100%;    /* Зображення ніколи не буде ширшим за контейнер */
+    height: auto;       /* Пропорції зберігаються автоматично */
+    display: block;     /* Прибирає зайві відступи */
+    margin: 20px auto;  /* Центрує зображення та додає відступи зверху/знизу */
+    opacity: 0.8;       /* Можна трохи зменшити яскравість, щоб пасувало до золотого тексту */
 }
-/* Мобільна адаптація */
-@media (max-width: 480px) {
+
+/* Додаткове налаштування для контейнера, щоб текст не прилипав до країв на мобільних */
+.container {
+    width: 90%;         /* Займає 90% ширини на малих екранах */
+    max-width: 700px;   /* Але не більше 700px на великих */
+    box-sizing: border-box;
+}
+
+/* Налаштування для дуже маленьких екранів (iPhone SE тощо) */
+@media (max-width: 360px) {
+    h1 {
+        font-size: 2rem; /* Трохи зменшуємо шрифт імен, щоб вони не розривалися */
+    }
     .container {
-        padding: 40px 20px;
+        padding: 30px 15px; /* Менші внутрішні відступи */
     }
-    h2 {
-        font-size: 1.4rem;
-    }
- 
+}
 }
