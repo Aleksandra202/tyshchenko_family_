@@ -20,7 +20,11 @@ body {
     padding: 40px 20px;
 }
 /* CSS стилі для адаптивного зображення */
-
+.divider {
+        width: 100%;
+        max-width: 600px;
+        margin: 20px auto;
+    }
 .invitation-container {
     max-width: 100%; /* Забороняє контейнеру виходити за межі екрана */
     margin: 0 auto; /* Центрує контейнер на сторінці */
