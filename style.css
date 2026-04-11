@@ -20,10 +20,23 @@ body {
     padding: 40px 20px;
 }
 /* CSS стилі для адаптивного зображення */
-.divider {
-        width: 100%;
-        max-width: 600px;
-        margin: 20px auto;
+.text-divider {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #333;
+        margin: 20px 0;
+    }
+
+    .line {
+        flex: 1;
+        height: 1px;
+        background-color: #000;
+        margin: 0 15px;
+    }
+
+    .ornament {
+        font-size: 24px;
     }
 .invitation-container {
     max-width: 100%; /* Забороняє контейнеру виходити за межі екрана */
