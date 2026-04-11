@@ -10,87 +10,84 @@ body {
     color: #333;
     line-height: 1.6;
     background-color: #f4f4f4;
-    /* Фонове зображення */
-    background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80');
+    background-image: url('https://st3.depositphotos.com/9563468/37385/i/450/depositphotos_373853578-stock-photo-floral-spring-blue-background-blue.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     display: flex;
     justify-content: center;
-    padding: 40px 20px;
+    padding: 20px;
 }
 
-/* Ефект затемнення фону для кращого читання тексту */
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.4); /* Світле затемнення для читабельності */
     z-index: -1;
 }
 
-/* Контейнер */
 .container {
-    max-width: 700px;
+    max-width: 600px;
     width: 100%;
-    background: rgba(255, 255, 255, 0.96);
-    padding: 60px 40px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 20px;
     border-radius: 15px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     text-align: center;
-    backdrop-filter: blur(10px);
+    z-index: 1;
 }
 
-/* Заголовки */
-h1, h2 {
-    font-family: 'Playfair Display', serif;
+/* Стиль орнамента та заголовка */
+.main-ornament {
+    max-width: 150px; /* Ширина орнаменту */
+    height: auto;
+    display: block;
+    margin: 0 auto 5px auto; /* Мінімальний відступ знизу до тексту */
 }
 
 h1 {
-    font-size: clamp(2.5rem, 8vw, 4rem); /* Адаптивний розмір */
-    color: #bfa071; /* Золотий */
-    margin: 15px 0;
-    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    color: #bfa071;
+    margin: 0 auto 10px auto; /* Прибрали відступ зверху, мінімальний знизу */
+    line-height: 1.2;
 }
 
 h2 {
-    font-size: 1.8rem;
-    color: #3a6ea5; /* Синій */
-    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #3a6ea5;
+    margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
 /* Елементи дизайну */
 .divider {
-    width: 80px;
-    height: 2px;
+    width: 60px;
+    height: 1px;
     background: #bfa071;
-    margin: 0 auto;
+    margin: 10px auto;
 }
 
 .tagline {
     font-style: italic;
     color: #777;
-    margin-top: 15px;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    margin-bottom: 20px;
 }
 
 .section {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
-/* Стилі тексту */
 .date-text {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 600;
-    color: #333;
-}
-
-.location-item {
-    margin-bottom: 25px;
+    color: #444;
 }
 
 .location-label {
@@ -98,8 +95,8 @@ h2 {
     font-weight: 600;
     color: #bfa071;
     text-transform: uppercase;
-    font-size: 0.9rem;
-    margin-bottom: 5px;
+    font-size: 0.85rem;
+    margin-bottom: 3px;
 }
 
 .address {
@@ -112,46 +109,41 @@ h2 {
     font-weight: 600;
 }
 
+.ps-text {
+    font-size: 0.85rem;
+    margin-top: 15px;
+    color: #888;
+}
+
 /* Адаптація iframe */
 .iframe-container {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-iframe {
-    border: none;
+    position: relative;
     width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%; /* Співвідношення сторін */
 }
 
-.footer {
-    margin-top: 40px;
-    color: #bfa071;
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
 
-/* Стиль для декоративної лінії */
-.decorative-divider {
-    max-width: 100%;    /* Зображення ніколи не буде ширшим за контейнер */
-    height: auto;       /* Пропорції зберігаються автоматично */
-    display: block;     /* Прибирає зайві відступи */
-    margin: 20px auto;  /* Центрує зображення та додає відступи зверху/знизу */
-    opacity: 0.8;       /* Можна трохи зменшити яскравість, щоб пасувало до золотого тексту */
-}
-
-/* Додаткове налаштування для контейнера, щоб текст не прилипав до країв на мобільних */
-.container {
-    width: 90%;         /* Займає 90% ширини на малих екранах */
-    max-width: 700px;   /* Але не більше 700px на великих */
-    box-sizing: border-box;
-}
-
-/* Налаштування для дуже маленьких екранів (iPhone SE тощо) */
-@media (max-width: 360px) {
-    h1 {
-        font-size: 2rem; /* Трохи зменшуємо шрифт імен, щоб вони не розривалися */
+/* Повна адаптація під мобільні */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
     }
     .container {
-        padding: 30px 15px; /* Менші внутрішні відступи */
+        padding: 20px 15px;
     }
-}
+    h1 {
+        font-size: 2.2rem;
+    }
+    .main-ornament {
+        max-width: 120px;
+    }
 }
